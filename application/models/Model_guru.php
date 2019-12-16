@@ -10,13 +10,19 @@ class Model_guru extends CI_Model {
 
 	public function simpan($data)
 	{
-		return $this->db->insert('guru');
+		return $this->db->insert('guru',$data);
 	}
 
 	public function update($data,$nip)
 	{
 		$this->db->where('nip', $nip);
 		$this->db->update('guru', $data);
+	}
+
+	public function getnip($nip)
+	{
+		$param = array('nip' =>$nip);
+		$this->db->get_where('guru',$param);
 	}
 
 	
