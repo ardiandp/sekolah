@@ -12,6 +12,7 @@
 			<td>Nama Guru</td>
 			<td>Email</td>
 			<td>Jenis Kelamin</td>
+			<td>Aksi</td>
 		</tr>
 		<?php $no=1; foreach ($guru as $key => $value) { ?>
 		<tr>		
